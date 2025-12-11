@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.getElementById('main-content');
 
     // ** كلمة المرور السرية هنا **
-    const SECRET_PASSWORD = 'love'; // يمكنك تغييرها إلى أي كلمة تريدها
+    const SECRET_PASSWORD = '3092010'; // يمكنك تغييرها إلى أي كلمة تريدها
 
     unlockButton.addEventListener('click', () => {
         const enteredPassword = passwordInput.value.trim().toLowerCase();
