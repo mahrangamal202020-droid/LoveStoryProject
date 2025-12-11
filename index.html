@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصة حبنا</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="screen active" id="login-screen">
+        <div class="card lock-card">
+            <i class="fas fa-lock lock-icon"></i>
+            <h2>أدخل كلمة السر</h2>
+            <p>افتح قصة حبنا</p>
+            <input type="password" id="password-input" placeholder="••••••••">
+            <button id="unlock-button">فتح <i class="fas fa-unlock"></i></button>
+            <div class="hearts-row">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="screen" id="main-content">
+        <div class="header-section">
+            <div class="title-card">
+                <p>❤️ ينور عيني ❤️</p>
+            </div>
+            <div class="text-message">
+                <p>حبيبتي عايز أقولك حقلك عليا من أي حاجة حصلت السنة دي والسنة اللي جاية هتبقا أحلى سنة لينا مع بعض ربنا يخليكي ليا وميحرمنيش منك.</p>
+                <button onclick="document.getElementById('memories-section').scrollIntoView()">ابدأ الرحلة! <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+
+        <div class="memories-section" id="memories-section">
+            <h2 class="section-title">✨ ذكرياتنا الجميلة ✨</h2>
+            
+            <div class="memory-card audio-card">
+                <h3 class="audio-title">🎵 الأغنية بنحبها 💖</h3>
+                <audio controls loop>
+                    <source src="audio/your_song.mp3" type="audio/mpeg">
+                    متصفحك لا يدعم عنصر الصوت.
+                </audio>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/photo1.jpg" alt="أحلى لحظة في حياتي">
+                <p>أحلى لحظة في حياتي</p>
+            </div>
+            
+            <div class="memory-card">
+                <img src="images/photo2.jpg" alt="يوم مميز">
+                <p>☀️ يوم مميز</p>
+            </div>
+
+            <div class="memory-card">
+                <img src="images/photo3.jpg" alt="بحب اليوم ده أوي">
+                <p>بحب اليوم ده أوي</p>
+            </div>
+            
+            <div class="card final-message">
+                <h1>🎉 بحبك ✨</h1>
+                <p>❤️ ربنا يخليكي ليا ❤️</p>
+                <button onclick="location.href='#login-screen'">ارجع للذكريات</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

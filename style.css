@@ -1,0 +1,162 @@
+/* 1. إعدادات عامة وخطوط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* استخدم خط عربي عصري إذا أردت */
+}
+
+body {
+    /* الخلفية المتدرجة المشابهة للفيديو */
+    background: linear-gradient(to top, #ff99aa, #ff4d6d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* البداية من الأعلى لصفحة المحتوى */
+    color: #333;
+    padding: 20px 0; /* مسافة من الأعلى والأسفل */
+}
+
+/* 2. تنسيق الشاشات والبطاقات */
+.screen {
+    width: 100%;
+    max-width: 450px; /* لتحديد عرض شاشات الموبايل */
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 40px; /* حواف دائرية كبيرة مثل الفيديو */
+    padding: 20px;
+    display: none; /* إخفاء كل الشاشات مبدئياً */
+    text-align: center;
+    overflow: hidden; /* لإخفاء أي جزء يخرج عن الحدود */
+}
+
+.screen.active {
+    display: block; /* إظهار الشاشة النشطة */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. تنسيق شاشة الدخول */
+#login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* لتوسيط محتويات شاشة الدخول */
+    padding: 0;
+}
+
+.lock-card {
+    background: none; /* جعل البطاقة شفافة على خلفية التطبيق */
+    box-shadow: none;
+    color: white;
+}
+
+.lock-icon {
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#password-input {
+    width: 80%;
+    padding: 15px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.2rem;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#unlock-button {
+    width: 80%;
+    padding: 15px;
+    background-color: #e53955; /* لون زر الفتح */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#unlock-button:hover {
+    background-color: #c92c46;
+}
+
+.hearts-row i {
+    color: #ffcccc;
+    font-size: 1.5rem;
+    margin: 0 5px;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* 4. تنسيق المحتوى الرئيسي */
+#main-content {
+    background-color: #f7f7f7;
+    padding: 0;
+    max-height: 90vh; /* تحديد ارتفاع لإضافة تمرير (Scroll) */
+    overflow-y: auto; /* إضافة شريط تمرير عند تجاوز المحتوى للارتفاع */
+}
+
+.title-card {
+    background-color: #ff99aa;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 30px 30px 0 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.text-message {
+    padding: 30px;
+    text-align: right;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 5. تنسيق قسم الذكريات */
+.memories-section {
+    padding: 20px;
+}
+
+.section-title {
+    color: #e53955;
+    margin-bottom: 25px;
+}
+
+.memory-card {
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: hidden; /* هام لقص الصورة */
+}
+
+.memory-card img {
+    width: 100%;
+    height: 350px; /* ارتفاع ثابت للبطاقة */
+    object-fit: cover; /* لضمان ملء الصورة للبطاقة دون تشوه */
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.audio-card {
+    background-color: #ffecf0;
+}
+
+.audio-title {
+    color: #e53955;
+    margin-bottom: 10px;
+}
+
+.final-message {
+    background-color: #e53955;
+    color: white;
+}
